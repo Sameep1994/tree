@@ -1,9 +1,14 @@
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class SerializeAndDeserialize {
     public static int index=0;
     public static int empty = -1;
     public static void main(String[] args) {
+
+        PriorityQueue<Integer>pq= new PriorityQueue<>();
+        pq.add(10);
+        pq.remove();
 
     }
     //Revision

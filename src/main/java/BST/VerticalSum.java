@@ -18,7 +18,7 @@ public class VerticalSum {
     *       /       \
     *     2         3
     *       \4
-    * since 1 and 3 are alinged res will be 2 5 3
+    * since 1 and 4 are alinged res will be 2 5 3
     * we use a value called horizontal distance for root it will be 0 for left child dec by 1 and right child inc by 1
     * store corrspoinding hd and sum in a treemap traverse the tree map and print it
     * */

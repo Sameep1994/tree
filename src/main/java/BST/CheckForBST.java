@@ -13,7 +13,8 @@ public class CheckForBST {
         System.out.println(isBstIn(root));
     }
 //important
-    /*Recursive sol to check the left and right subtree is false because it doesnt check for node at distance more than 1 and gives wrong op
+    /*Recursive sol to check the left and right subtree is false because
+    it doesnt check for node at distance more than 1 and gives wrong op
     *
     *
     * pass range for all nodes

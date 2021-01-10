@@ -6,9 +6,11 @@ public class NodeAtDistk {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
         root.right.right = new Node(6);
+        root.right.right.right = new Node(7);
         printNode(root,2);
     }
-//needs revisit
+//prints all the nodes at distance k from it, so we pass the node and k as an argument and at each traversal we decrease k
+//when k becomes 0 that means we are at the desired node and print it
     public static void printNode(Node root,int k){
         if(root == null)
             return;
