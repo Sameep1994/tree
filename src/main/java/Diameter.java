@@ -1,5 +1,5 @@
 public class Diameter {
-    public static int res=0;
+    public static int res=1;
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -8,7 +8,7 @@ public class Diameter {
         root.left.right = new Node(5);
         root.right.right = new Node(6);
         dia(root);
-        System.out.println(res);
+        System.out.println(res-1);
     }
 
     //diameter is longest path b/w two leaf nodes
