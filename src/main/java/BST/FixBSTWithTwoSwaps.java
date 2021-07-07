@@ -11,12 +11,13 @@ public class FixBSTWithTwoSwaps {
         root.right.right = new Node(80);
 
         fix(root);
-        System.out.println("first"+first.key);
-        System.out.println("second"+second.key);
+        System.out.println("first "+first.key);
+        System.out.println("second "+second.key);
     }
-//revision
+
     //two nodes are swapped in BST violating the BST property we need to find them out
     //we will use the property of inorder traversal of BST where all elements are sorted and we will find out two nodes
+    //in first we store the previous value in second we store the current value
     public static void fix(Node root){
         if(root==null)
             return;

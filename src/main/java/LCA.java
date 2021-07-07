@@ -6,26 +6,25 @@ public class LCA {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
         root.right.right = new Node(6);
-        System.out.println(lca(root,4,5).key);
+        System.out.println(lowestCommonAncestor(root,4,5).key);
     }
-//revision
+
+/*
+here we are trying the find lowest common ancestor and by lowest we mean the one in closest level
+*
+*
+* */
+
+
 //assumption is both are present in the tree
-    public static Node lca(Node root,int n1,int n2){
-        if(root==null)
-            return null;
-        //first case if either of node is the root node
-        if(root.key==n1 || root.key==n2)
-            return root;
-        //recursively calling for children
-        Node lca1 = lca(root.left,n1,n2);
-        Node lca2 = lca(root.right,n1,n2);
-//case 2 when one node is in one sub tree and one in another
-        if(lca1 !=null && lca2!=null)
-            return root;
-        //case 3 and 4 if one contains or none contains
-        if(lca1!=null)
-            return lca1;
-        else
-            return lca2;
+    public static Node lowestCommonAncestor(Node root,int p,int q){
+        //finding left and right, the root at which they split to left and right subtree is lca
+        if(root == null || root.key == p || root.key == q)  return root;
+        Node left = lowestCommonAncestor(root.left, p, q);
+        Node right = lowestCommonAncestor(root.right, p, q);
+        //split
+        if(left != null && right != null)   return root;
+        //return the subtree where both resides either left or right
+        return left != null ? left : right;
     }
 }
